@@ -10,3 +10,5 @@ Bookbot will take the contents of a book in txt format and return a report conta
 
 1. in the root dir of project create a book.txt file or a directory of multiple books
 2. run with following arguments "python3 main.py [path to book]"
+
+Have a great day!!!

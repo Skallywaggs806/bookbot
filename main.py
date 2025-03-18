@@ -17,23 +17,27 @@ def get_book_text():
     return file_contents
 
 
-
-def main():
-    book_text = get_book_text()
-    word_count = count_words(book_text)
-    character_count = count_characters(book_text)
-    sorted_characters = sort_characters(character_count)
+#Creates report
+def reporter(word_count, sorted_characters, character_count):
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {path_to_books}")
     print("----------- Word Count ----------")
     print(f"Found {word_count} total words")
     print("-------- Character Count --------")
     for character in character_count:
-         print(f"{character}: {character_count[character]}")
+        print(f"{character}: {character_count[character]}")
     
     print("============= END ===============")
+    return
 
 
+
+def main():
+    book_text = get_book_text()
+    word_count = count_words(book_text)
+    character_count = count_characters(book_text)
+    sorted_characters = sort_characters(character_count)
+    reporter(word_count, sorted_characters, character_count)
 
 
 main()
